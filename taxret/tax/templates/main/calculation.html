@@ -1,0 +1,22 @@
+{% extends 'main/header.html' %}
+
+{% block content %}
+<style>
+    div.a {
+            text-align: center;
+    }
+    </style>
+<div class = 'a'>
+Calculate Here
+{%for u in user%}
+{%for to in tocg%}
+{%if to.tocg == u.tocg%}
+{{to.pan}}
+{%endif%}
+{%endfor%}
+{%endfor%}
+
+<div>
+
+
+{%endblock%}

@@ -1,0 +1,34 @@
+{% extends 'main/header.html' %}
+
+{% block content%}
+<br>
+<br>
+<style>
+    div.a {
+            text-align: center;
+    }
+    </style>
+<div class='a'>
+<font color="Blue">
+<h1><p>Hello {{user.username|title}}</p></h1>
+<h4> Salary Details</h4>
+</font>
+<font size="5" color="purple">
+
+{% for tut in tutorials %}
+{% if user.username|title == tut.pan.pan%}
+<p><b>Pan</b>: {{tut.pan}}</p>
+<p><b>Standard Deduction</b>: {{tut.Standard_Deduction}}</p>
+<p><b>Special allowence</b>: {{tut.Special_allowance}}</p>
+<p><b>HRA</b>: {{tut.HRA}}</p>
+
+<p><b>Basic salary</b>: {{tut.Basic_salary}}</p>
+<p><b>Total Basic Income = </b>:{{tut.totinc}}</p>
+<p><b>TOTTAX = </b>: {{tut.tottax}}</p>
+
+{%endif%}
+{%endfor%}
+</div>
+
+
+{%endblock%}

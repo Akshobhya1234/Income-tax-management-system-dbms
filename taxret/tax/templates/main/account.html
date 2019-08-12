@@ -1,0 +1,22 @@
+
+{% extends 'main/header.html' %}
+
+{% block content %}
+<style>
+    div.a {
+            text-align: center;
+    }
+    </style>
+<div class='a'>
+<h1>Select The Table You Want To View</h1>
+<font size="5" color="blue">
+<p><a href = "/user123">{{user.username|title}} Details</a></p>
+<p><a href = "/tocg">Tax on capital gain</a></p>
+<p><a href = "/Its">Income_tax_slab Details</a></p>
+<p><a href = "/Salary123">Salary Details</a></p>
+<p><a href = "/cg">Capital gain Details</a></p>
+<p><a href = "/deduction">Deduction Details</a></p>
+<p><a href = "/oi">Other Income Details</a></p>
+</div>
+</font>
+{%endblock%}

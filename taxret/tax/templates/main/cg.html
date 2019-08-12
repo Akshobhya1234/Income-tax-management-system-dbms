@@ -1,0 +1,26 @@
+
+{% extends 'main/header.html' %}
+
+{% block content %}
+<br>
+<br>
+<style>
+    div.a {
+            text-align: center;
+    }
+    </style>
+<div class='a'>
+<font color="purple">
+<h1>Hello {{user.username|title}}</h1>
+<h4>Capital Gain</h4>
+</font>
+<font size="5" color="Blue">
+{% for tut in tutorials%}
+{%if user.username|title == tut.pan.pan%}
+<p><b>Pan</b>: {{tut.pan}}</p>
+<p><b>Asset amount</b>: {{tut.Asset_amount}}</p>
+<p><b>Asset_type</b>: {{tut.Asset_type}}</p>
+</font>
+{%endif%}
+{%endfor%}
+{%endblock%}

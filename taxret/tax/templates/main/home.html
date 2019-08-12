@@ -1,0 +1,10 @@
+{% extends 'main/header.html' %}
+
+{% block content %}
+{% load staticfiles%}
+	<div class="main">
+        <h1>Welcome {{user.username | title}}</h1>
+        <img src="{%static 'img/image.jpg'%}" alt="" width="500" height="350">
+        
+    </div>
+{% endblock %}

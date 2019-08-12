@@ -1,0 +1,34 @@
+{% extends 'main/user123.html' %}
+
+{% block content%}
+<br>
+<br>
+<style>
+    div.a {
+            text-align: center;
+    }
+    </style>
+
+<div class="a">
+<font color="Red">
+
+<h1><p>Hello {{user.username|title}}</p></h1>
+<p><h4>Tax on capital gain</h4></p>
+</font>
+{% for tut in tutorials %}
+{% if user.username|title == tut.pan.pan%}
+<font size="5" color="Blue">
+<p><b>Pan</b>: {{tut.pan}}</p>
+<p><b>Gain Category</b>: {{tut.Gain_category}}</p>
+<p><b>Asset_type</b>: {{tut.Asset_type}}</p>
+<p><b>Holding period:</b> {{tut.Holding_period}}</p>
+<p><b>Tax percentage:</b> {{tut.Tax_percentage}}</p>
+<p><b>Tax On Capital Gain = </b>{{tut.toc}}</p>
+
+</font>
+{%endif%}
+
+
+{%endfor%}
+</div>
+{%endblock%}

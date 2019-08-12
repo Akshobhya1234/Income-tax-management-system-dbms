@@ -1,0 +1,27 @@
+{% extends 'main/header.html' %}
+{% block content %}
+
+<style>
+div.a {
+        text-align: center;
+}
+</style>
+
+<div class = 'a'>
+
+<font color = "black">
+<h1>Hello {{user.username|title}}
+<form method="post">{% csrf_token %}
+
+Please Fill The details</h1>
+<p><a href = "/userform123">{{user.username|title}} Details</a></p>
+<p><a href = "/tocgform123">Tax on capital gain</a></p>
+<p><a href = "/Itsform123">Income_tax_slab Details</a></p>
+<p><a href = "/Salaryform123">Salary Details</a></p>
+<p><a href = "/cgform123">Capital gain Details</a></p>
+<p><a href = "/deductionform123">Deduction Details</a></p>
+<p><a href = "/oiform123">Other Income Details</a></p>
+</font>
+</form>
+</div>
+{%endblock%}
